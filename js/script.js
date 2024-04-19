@@ -3,7 +3,8 @@ const { createApp } = Vue;
 const app = createApp({
     data(){
         return{
-            done: "done",
+            checked: "checked",
+            delete: "delete",
             inputUser: "",
             newTodo:{text:"",done:true},
             todo: [
@@ -21,6 +22,13 @@ const app = createApp({
             this.todo.push({...this.newTodo});
             this.newTodo.text = "";
             this.inputUser = "";
+            }
+        },
+        activeClass: function(index){
+            if(this.todo[index].done === true){
+                this.todo[index].done = false;
+            } else{
+                this.todo[index].done = true;
             }
         }
     },

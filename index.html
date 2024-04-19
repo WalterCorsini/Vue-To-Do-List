@@ -24,8 +24,8 @@
         </div>
         <div class="tasks">
               <ul class="inner-list">
-                <li :class="{'done' : curTodo.done === false}" v-for="curTodo in todo">
-                  <span class="circle checked"></span>{{curTodo.text}}
+                <li @click="activeClass(i)" :class="{'done' : curTodo.done === false}" v-for="curTodo, i in todo">
+                  <span :class="{'checked' : curTodo.done === true},{'delete' : curTodo.done === false}" class="circle"></span>{{curTodo.text}}
                 </li>
               </ul>
             </li>
