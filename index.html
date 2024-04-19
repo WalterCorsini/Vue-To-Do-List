@@ -19,14 +19,15 @@
     <main>
       <div class="container">
         <div class="top">
-          <input @keyup.enter="addTodo" type="text" placeholder="es: Fare la spesa..." v-model="inputUser">
+          <input @keyup.enter="addTodo" type="text" placeholder="es: Fare la spesa..." v-model="newTodo.text">
           <button @click="addTodo" type="button" class="btn btn-filled">Add Task</button>
         </div>
         <div class="tasks">
               <div v-show="todo.length === 0" style="text-align: center;"> Non ci sono Elementi in lista</div>
               <ul class="inner-list">
                 <li @click="activeClass(i)" v-for="curTodo, i in todo">
-                  <span :class="{'checked' : curTodo.done === true},{'delete' : curTodo.done === false}, {'done' : curTodo.done === false}" class="circle">{{curTodo.text}}</span><span @click="removeTodo(i)" class="cross">X</span>
+                  <span :class="{'checked' : curTodo.done === true},{'delete' : curTodo.done === false}, {'done' : curTodo.done === false}" class="circle">{{curTodo.text}}</span>
+                  <span @click="removeTodo(i)" class="cross">X</span>
                 </li>
               </ul>
             </li>

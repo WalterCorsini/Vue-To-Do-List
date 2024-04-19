@@ -13,6 +13,3 @@ Bonus:
 2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente ed eventuale icona (se done era uguale a false, impostare true e viceversa)
 3- visualizzare a fianco ad ogni item una "x": cliccando su di essa, il todo viene rimosso dalla lista
 4- implementare la persistenza di dati tramite local storage, quindi all'avvio dell'applicazione prendere i dati salvati per renderizzarli in pagina e ad ogni cambiamento aggiornare i dati salvati.
-Utilizzate la todilist che avete implementato durante la parte HTML e CSS, lasciando solo una lista e togliendo i tag.
-Nel caso non avevate completato l'esercizio in quel periodo vi invio il codice di partenza.
-Buon lavoro e buon divertimento! :muscolo: :laptop_parrot:
