@@ -30,6 +30,10 @@ const app = createApp({
             } else{
                 this.todo[index].done = true;
             }
+        },
+        removeTodo: function(index){
+            console.log("elimina",index);
+            this.todo.splice(index,1);
         }
     },
 }).mount("#app");

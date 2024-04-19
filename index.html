@@ -23,9 +23,10 @@
           <button @click="addTodo" type="button" class="btn btn-filled">Add Task</button>
         </div>
         <div class="tasks">
+              <div v-show="todo.length === 0" style="text-align: center;"> Non ci sono Elementi in lista</div>
               <ul class="inner-list">
-                <li @click="activeClass(i)" :class="{'done' : curTodo.done === false}" v-for="curTodo, i in todo">
-                  <span :class="{'checked' : curTodo.done === true},{'delete' : curTodo.done === false}" class="circle"></span>{{curTodo.text}}
+                <li @click="activeClass(i)" v-for="curTodo, i in todo">
+                  <span :class="{'checked' : curTodo.done === true},{'delete' : curTodo.done === false}, {'done' : curTodo.done === false}" class="circle">{{curTodo.text}}</span><span @click="removeTodo(i)" class="cross">X</span>
                 </li>
               </ul>
             </li>
