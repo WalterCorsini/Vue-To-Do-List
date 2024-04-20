@@ -3,15 +3,8 @@ const { createApp } = Vue;
 const app = createApp({
     data(){
         return{
-            checked: "checked",
-            delete: "delete",
             newTodo:{text:"",done:true},
-            todo: [
-            {text: "Recruiting blog post", done: true},
-            {text: "Mobile app luaunch", done: false},
-            {text: "Interview John H.", done: false},
-            {text: "Summit update to mobile storefronts", done: true},
-            ]
+            todo: []
         };
     },
     created(){  // on startup
@@ -19,8 +12,6 @@ const app = createApp({
          // this.todo = localTodo !== null ? localTodo : "";
             if(localTodo !== null){   // if local storage is not empty
                 this.todo = JSON.parse(localTodo);      // save localstorage in array
-            } else{             
-                this.todo = [];                         // clear array
             }
         },
     methods: {
@@ -42,7 +33,6 @@ const app = createApp({
             }
         },
         removeTodo: function(index){
-            const deleteTodo = this.todo.text;
             this.todo.splice(index,1);
             // refresh local storage
             const jsonTodo = JSON.stringify(this.todo);
