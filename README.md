@@ -24,11 +24,11 @@ Bonus:
 ## LOGICA E OUTPUT
 - alla casella di input do un evento "@keyup.enter" per ascoltare il click della tastiera enter invoco  la funzione "addTodo"
 - alla casella di input assegno l'attributo v-model e gli assegno come valore "newTodo.text" (la key text dell'oggetto newTodo)
-- al click sul botton invoco  la funzione "addTodo"
-- prima di visualizzare la lista creo un tag h2 con scritto "la tua lista è vuota" e lo gestisco tramite v-show con la condizione: "todolist.lenght === 0"
+- al click sul bottone invoco  la funzione "addTodo"
+- prima di visualizzare la lista creo un tag h2 con scritto "la tua lista è vuota" e lo gestisco tramite v-show con la condizione: "todolist.length === 0"
 - nell "li" creo un ciclo v-for in cui faccio ciclare gli elementi della todoList prendendomi elemento e index per ogni ciclo
 - nel tag span all'interno di "li" gestisco 3 classi dinamiche
-    1. do la classe done (testo sarrato) se la key "done" dell'elemento corrente è uguale a true
+    1. do la classe done (testo sbarrato) se la key "done" dell'elemento corrente è uguale a true
     2. do la classe checked (cerchio verde con V) se la key "done" dell'elemento corrente è uguale a true
     3. do la classe delete (cerchio rosso con X) se la key "done" dell'elemento corrente è uguale a false
 - nel tag span all'interno di "li" gestisco l'elemento click
@@ -44,7 +44,7 @@ Bonus:
 
 ## CREATED
 - creo una variabile "localTodo" a cui passo la stringa salvata nella memoria locale sotto l'etichetta "task" ( la mia todoList)
-- se nella variabile "localTodo" non ho valore null(non hp nulla salvato nulla sotto quell'etichetta "task")
+- se nella variabile "localTodo" non ho valore null(non ho nulla salvato nulla sotto quell'etichetta "task")
     - salvo nell'array todoList il valore della variabile "localTodo" ritrasformato in un array di oggetti.
 
 ## METHODS
@@ -58,6 +58,6 @@ Bonus:
     - salvo nella memoria locale la variabile "jasonTodo" che contiene tutto todoList
 
 2. ### deleteTodo
-- prendo l'elemento corrente della todolist tramite il suo indice e lo elimino
+- prendo l'elemento corrente della todolist e tramite il suo indice lo elimino
 - creo una variabile "jasonTodo" a cui passo tutto l'array todolist trasformandolo in stringa
 - salvo nella memoria locale la variabile "jasonTodo" che contiene tutto todoList con un etichetta "task"
