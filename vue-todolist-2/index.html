@@ -51,7 +51,7 @@
               </span>
               <!-- vshow show button when tash is done -->
               <!-- deleToto remove todo of the list and refresh local storage -->
-              <div
+              <div id="deleteBtn"
                 v-show="curElem.done === true"
                 @click="deleteTodo(index)"
                 class="rounded"
